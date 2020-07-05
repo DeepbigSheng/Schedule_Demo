@@ -3,3 +3,5 @@ mybatis:
 spring:
   jackson:
     time-zone: GMT+8
+  quartz:
+    scheduler-name: HelloQuartz
