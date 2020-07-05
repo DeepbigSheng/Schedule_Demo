@@ -1,0 +1,5 @@
+mybatis:
+  config-location: classpath:mybatis-config.xml
+spring:
+  jackson:
+    time-zone: GMT+8
