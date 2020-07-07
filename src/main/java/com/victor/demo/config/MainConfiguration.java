@@ -18,7 +18,6 @@ import java.beans.PropertyVetoException;
 @Configuration
 public class MainConfiguration {
     @Bean
-    @QuartzDataSource
     public DataSource createDataSource(){
         ComboPooledDataSource ds = new ComboPooledDataSource();
         JdbcProperty jdbcProperty = JdbcProperty.getJdbcProperty();
@@ -39,11 +38,5 @@ public class MainConfiguration {
             e.printStackTrace();
         }
         return ds;
-    }
-
-    @Bean
-    public Scheduler scheduler() throws SchedulerException {
-        SchedulerFactory schedulerFactory = new StdSchedulerFactory();
-        return schedulerFactory.getScheduler();
     }
 }

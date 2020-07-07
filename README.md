@@ -1,7 +1,12 @@
 # Schedule_Demo
 这是一个基于Spring Boot和Quartz框架的定时任务Demo
 
-## POST 新增定时任务
+## 环境变量配置
+JDBC_PROPERTY={"driver":"com.mysql.cj.jdbc.Driver", "url":"jdbc:mysql://localhost:3306/example?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai","username":"root","password":"helloworld","autoCommitOnClose":"false","minPoolSize":30,"maxPoolSize":150,"initialPoolSize":50,"maxIdleTime":1800,"acquireIncrement":10,"checkoutTimeout":20000,"maxStatements":0}
+
+## 定时任务增删改查
+
+### POST 新增定时任务
 http://localhost:8080/quartz/add
 ```
 {
@@ -17,10 +22,10 @@ http://localhost:8080/quartz/add
 }
 ```
 
-## GET 查看定时任务
+### GET 查看定时任务
 http://localhost:8080/quartz?jobGroup=AppName1&jobName=ScheduleJob1
 
-## PUT 修改定时任务
+### PUT 修改定时任务
 http://localhost:8080/quartz
 ```
 {
@@ -33,7 +38,7 @@ http://localhost:8080/quartz
 }
 ```
 
-## DELETE 修改定时任务
+### DELETE 修改定时任务
 http://localhost:8080/quartz
 ```
 {
